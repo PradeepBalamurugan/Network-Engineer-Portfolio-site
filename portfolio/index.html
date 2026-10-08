@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Pradeep Balamurugan | Aspiring Network Engineer Portfolio</title>
+  <meta name="description" content="Professional portfolio of Pradeep Balamurugan, Aspiring Network Engineer. Computer Science graduate transitioning into networking with hands-on training in Cisco Packet Tracer, CCNA, Linux, virtualization, and Proxmox home labs.">
+  <meta name="author" content="Pradeep Balamurugan">
+  <meta name="keywords" content="Pradeep Balamurugan, Network Engineer, NOC Engineer, Network Support Engineer, Cisco Packet Tracer, CCNA, OSPF, VLAN, Proxmox, Wireshark, Linux">
+  
+  <!-- Favicon / SVG Icon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%230f172a' stroke='%230ea5e9' stroke-width='6'/><circle cx='50' cy='28' r='10' fill='%2338bdf8'/><circle cx='25' cy='68' r='10' fill='%2310b981'/><circle cx='75' cy='68' r='10' fill='%2310b981'/><line x1='50' y1='28' x2='25' y2='68' stroke='%2338bdf8' stroke-width='4'/><line x1='50' y1='28' x2='75' y2='68' stroke='%2338bdf8' stroke-width='4'/><line x1='25' y1='68' x2='75' y2='68' stroke='%230ea5e9' stroke-width='3'/></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Ambient Grid Canvas -->
+  <canvas id="network-canvas" aria-hidden="true"></canvas>
+
+  <!-- Sticky Header & Navigation -->
+  <header id="site-header" class="site-header">
+    <div class="header-container">
+      <a href="#home" class="brand-logo" aria-label="Pradeep Balamurugan Home">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-name">PB</span>
+        <span class="brand-bracket">/&gt;</span>
+        <span class="brand-domain">net.eng</span>
+        <span class="status-pulse-dot" title="Interface Status: UP"></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav id="navbar" class="navbar" aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#career-goal" class="nav-link">Career Goal</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="#training" class="nav-link">Training</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="header-actions">
+        <a href="assets/resume.pdf" class="btn btn-outline-header" target="_blank" rel="noopener noreferrer" download="Pradeep_Balamurugan_Resume.pdf">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Resume</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Backdrop -->
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+
+  <main id="main-content">
+
+    <!-- 1. HOME / HERO SECTION -->
+    <section id="home" class="hero-section section-padding">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <!-- Terminal Status Pill -->
+          <div class="terminal-badge">
+            <span class="status-indicator"></span>
+            <span class="badge-text">STATUS: LINK UP // SEEKING ENTRY-LEVEL ROLES</span>
+          </div>
+
+          <h1 class="hero-name">
+            Pradeep <span class="text-gradient">Balamurugan</span>
+          </h1>
+          
+          <h2 class="hero-title">Aspiring Network Engineer</h2>
+
+          <p class="hero-intro">
+            Computer Science Engineering graduate and IT professional with 3+ years of software development experience transitioning into network engineering and infrastructure. Completed comprehensive A+, Network+, CCNA, and CEH training at Indra Institute of Education (IIE).
+          </p>
+
+          <p class="hero-statement">
+            Equipped with practical hands-on experience in Cisco Packet Tracer multi-router topologies, routing protocols, VLAN segmentation, Linux systems, and a dedicated Proxmox home lab. Seeking to leverage strong troubleshooting discipline in <strong>Network Engineer</strong>, <strong>NOC Engineer</strong>, or <strong>Network Support</strong> roles.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+              <span>View My Projects</span>
+            </a>
+
+            <a href="assets/resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" download="Pradeep_Balamurugan_Resume.pdf">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+
+            <a href="https://linkedin.com/in/pradeep-balamurugan" class="btn btn-tertiary" target="_blank" rel="noopener noreferrer" aria-label="Visit Pradeep's LinkedIn profile">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c-.95 0-1.72-.77-1.72-1.72s.77-1.72 1.72-1.72 1.73.77 1.73 1.72-.78 1.72-1.73 1.72m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+
+          <!-- Quick Terminal Meta -->
+          <div class="hero-tech-strip">
+            <div class="tech-strip-item">
+              <span class="terminal-prefix">#</span>
+              <span class="tech-name">TCP/IP & OSI</span>
+            </div>
+            <div class="tech-strip-item">
+              <span class="terminal-prefix">#</span>
+              <span class="tech-name">VLANs & OSPF</span>
+            </div>
+            <div class="tech-strip-item">
+              <span class="terminal-prefix">#</span>
+              <span class="tech-name">Cisco Packet Tracer</span>
+            </div>
+            <div class="tech-strip-item">
+              <span class="terminal-prefix">#</span>
+              <span class="tech-name">Proxmox Home Lab</span>
+            </div>
+            <div class="tech-strip-item">
+              <span class="terminal-prefix">#</span>
+              <span class="tech-name">Linux & Grafana</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Media / Photo Container -->
+        <div class="hero-media">
+          <div class="profile-card">
+            <div class="profile-card-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="card-caption">host: pradeep-workstation</span>
+            </div>
+            
+            <div class="profile-image-wrapper">
+              <img src="assets/profile.jpg" alt="Pradeep Balamurugan - Aspiring Network Engineer" class="profile-photo" id="profile-img">
+              <div class="network-badge-overlay">
+                <span class="badge-status-dot"></span>
+                <span>Ready for Hire</span>
+              </div>
+            </div>
+
+            <div class="profile-meta-footer">
+              <div class="meta-row">
+                <span class="meta-label">Location:</span>
+                <span class="meta-val">Coimbatore, Tamil Nadu, India</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">Discipline:</span>
+                <span class="meta-val">Networking & Infrastructure</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">Training:</span>
+                <span class="meta-val">A+, N+, CCNA, CEH (IIE)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// 01. OVERVIEW</div>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          
+          <div class="about-narrative">
+            <p class="lead-text">
+              I am a <strong>Computer Science and Engineering graduate</strong> with over 3 years of hands-on software development experience, actively transitioning into the domain of <strong>Network Engineering and IT Infrastructure</strong>.
+            </p>
+
+            <p>
+              My software engineering background at <strong>Trika Technologies</strong> and <strong>Zoho Corporation</strong> provided me with a deep foundation in Linux systems, enterprise middleware, API communication, backend log debugging, and production telemetry monitoring using Grafana. Over time, my technical passion naturally evolved toward the underlying infrastructure that connects services together: routing protocols, network topologies, switching fabrics, and virtualization.
+            </p>
+
+            <p>
+              To formalize and accelerate my transition into networking, I completed intensive hands-on training in <strong>A+, Network+, CCNA, and CEH</strong> at the <strong>Indra Institute of Education (IIE)</strong> in Coimbatore. Through this curriculum and practical internships, I gained rigorous exposure to core networking protocols, IPv4/IPv6 subnetting, multi-router OSPF routing, VLAN segmentation, ACL traffic filtering, and Wireshark packet capture analysis.
+            </p>
+
+            <p>
+              Beyond simulation software, I build and maintain a physical <strong>Proxmox VE virtualized home lab</strong>. This allows me to regularly manage virtual machines, configure NFS/SMB network storage, implement secure remote connectivity using Tailscale and Cloudflare Tunnels, operate local DNS caching with Pi-hole, and systematically troubleshoot infrastructure bottlenecks.
+            </p>
+
+            <p>
+              As an entry-level professional, I bring a rare combination: rigorous practical networking training, disciplined troubleshooting methodology, and deep Linux/scripting agility.
+            </p>
+          </div>
+
+          <!-- Highlight Cards -->
+          <div class="about-cards">
+            
+            <div class="tech-card about-card">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Engineering Foundation</h3>
+              <p class="card-desc">
+                B.E. in Computer Science and Engineering (CGPA 7.71). Strong analytical grounding in system architecture, operating systems, and computer network theory.
+              </p>
+            </div>
+
+            <div class="tech-card about-card">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Network Training & Labs</h3>
+              <p class="card-desc">
+                Completed A+, N+, CCNA, CEH training at Indra Institute of Education. Hands-on configuration of Cisco Packet Tracer topologies and Wireshark traffic analysis.
+              </p>
+            </div>
+
+            <div class="tech-card about-card">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3 class="card-title">Infrastructure & Home Lab</h3>
+              <p class="card-desc">
+                Active Proxmox VE hypervisor running virtual machines, Docker containers, NFS/SMB storage shares, overlay networks (Tailscale/Twingate), and Grafana telemetry.
+              </p>
+            </div>
+
+            <div class="tech-card about-card">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="card-title">Troubleshooting Discipline</h3>
+              <p class="card-desc">
+                Proven ability to isolate connectivity faults, verify DNS resolution, inspect logs, validate routing tables, and isolate network vs. host service issues.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. CAREER GOAL SECTION -->
+    <section id="career-goal" class="career-goal-section section-padding bg-alt">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// 02. TARGET DIRECTION</div>
+          <h2 class="section-title">Career Goal</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="goal-highlight-box">
+          <div class="goal-header">
+            <span class="terminal-prompt">$</span>
+            <span class="goal-label">CAREER OBJECTIVE:</span>
+          </div>
+          <p class="goal-statement">
+            "Build a long-term career in <strong>networking and IT infrastructure</strong> by applying practical networking protocols, hands-on lab configuration, Linux administration, and systematic diagnostic methodologies to support mission-critical enterprise environments."
+          </p>
+        </div>
+
+        <h3 class="target-roles-heading">Target Roles</h3>
+
+        <div class="roles-grid">
+          
+          <div class="role-card">
+            <div class="role-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </div>
+            <h4 class="role-title">Entry-Level Network Engineer</h4>
+            <p class="role-desc">
+              Assist in configuring, deploying, and maintaining enterprise routers, switches, VLANs, routing protocols (OSPF), DHCP, and access control policies.
+            </p>
+            <div class="role-tags">
+              <span class="role-tag">Routing & Switching</span>
+              <span class="role-tag">VLAN / OSPF</span>
+              <span class="role-tag">Cisco Packet Tracer</span>
+            </div>
+          </div>
+
+          <div class="role-card">
+            <div class="role-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+            </div>
+            <h4 class="role-title">NOC Engineer</h4>
+            <p class="role-desc">
+              Monitor 24/7 network links and infrastructure telemetry, detect alerts using tools like Grafana and Uptime Kuma, triage incidents, and restore operational connectivity.
+            </p>
+            <div class="role-tags">
+              <span class="role-tag">Network Monitoring</span>
+              <span class="role-tag">Incident Triage</span>
+              <span class="role-tag">Grafana / Uptime Kuma</span>
+            </div>
+          </div>
+
+          <div class="role-card">
+            <div class="role-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
+            <h4 class="role-title">Network Support Engineer</h4>
+            <p class="role-desc">
+              Diagnose LAN/WAN connectivity issues, troubleshoot DNS, DHCP, and IP address conflicts, verify physical cabling, and resolve day-to-day user and device network problems.
+            </p>
+            <div class="role-tags">
+              <span class="role-tag">LAN Troubleshooting</span>
+              <span class="role-tag">DHCP / DNS</span>
+              <span class="role-tag">User Support</span>
+            </div>
+          </div>
+
+          <div class="role-card">
+            <div class="role-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="14" x2="23" y2="14"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="14" x2="4" y2="14"></line>
+              </svg>
+            </div>
+            <h4 class="role-title">IT Infrastructure / Network Support</h4>
+            <p class="role-desc">
+              Maintain servers, Linux environments, virtual machines, remote access overlays, and network attached storage for operational continuity and infrastructure reliability.
+            </p>
+            <div class="role-tags">
+              <span class="role-tag">Linux & Virtualization</span>
+              <span class="role-tag">Proxmox / Docker</span>
+              <span class="role-tag">Remote Access</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. EDUCATION SECTION -->
+    <section id="education" class="education-section section-padding">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// 03. ACADEMICS & QUALIFICATIONS</div>
+          <h2 class="section-title">Education</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline">
+          
+          <!-- Education Item 1: Degree -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content tech-card">
+              <div class="item-header">
+                <div>
+                  <span class="badge badge-accent">Degree</span>
+                  <h3 class="degree-title">Bachelor of Engineering in Computer Science and Engineering</h3>
+                  <div class="institution-name">Dr. N.G.P. Institute of Technology</div>
+                </div>
+                <div class="time-location">
+                  <span class="time-badge">2019 – 2023</span>
+                  <span class="location-text">Coimbatore, Tamil Nadu</span>
+                </div>
+              </div>
+              <div class="grade-pill">
+                <span class="pill-label">Cumulative GPA:</span>
+                <span class="pill-value">7.71</span>
+              </div>
+              <p class="item-summary">
+                Completed 4-year engineering curriculum covering Computer Networks, Operating Systems, Database Management Systems, Data Structures, Algorithms, and Software Engineering principles.
+              </p>
+            </div>
+          </div>
+
+          <!-- Education Item 2: Networking Training Program -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content tech-card">
+              <div class="item-header">
+                <div>
+                  <span class="badge badge-success">Specialized Training</span>
+                  <h3 class="degree-title">A+, N+, CCNA, CEH Technical Training</h3>
+                  <div class="institution-name">Indra Institute of Education (IIE)</div>
+                </div>
+                <div class="time-location">
+                  <span class="time-badge">06/2026 – 09/2026</span>
+                  <span class="location-text">Coimbatore, Tamil Nadu</span>
+                </div>
+              </div>
+              <div class="grade-pill">
+                <span class="pill-label">Training Period:</span>
+                <span class="pill-value">29/06/2026 – 23/09/2026</span>
+              </div>
+              <p class="item-summary">
+                Intensive classroom and lab training program dedicated to hardware maintenance, networking fundamentals, IPv4/IPv6 subnetting, Cisco switching/routing, network security, and cybersecurity practices.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. NETWORKING TRAINING SECTION (DEDICATED) -->
+    <section id="training" class="training-section section-padding bg-alt">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// 04. FORMAL NETWORKING TRAINING</div>
+          <h2 class="section-title">Networking Training</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="training-overview-card tech-card">
+          <div class="training-org-header">
+            <div>
+              <span class="badge badge-accent">Course Credential</span>
+              <h3 class="training-program-title">Networking & Cybersecurity Training</h3>
+              <div class="training-institute">Indra Institute of Education (IIE)</div>
+            </div>
+            <div class="training-meta">
+              <div class="time-badge">29/06/2026 – 23/09/2026</div>
+              <div class="location-text">Coimbatore, Tamil Nadu, India</div>
+            </div>
+          </div>
+          <p class="training-description">
+            Covered in-depth OSI and TCP/IP protocol stacks, subnetting mathematics, Cisco router and switch administration, VLAN architectures, dynamic routing with OSPF, network service deployment (DHCP/DNS/NAT), access control lists, network troubleshooting, and cybersecurity fundamentals.
+          </p>
+
+          <h4 class="curriculum-heading">Curriculum Topics Covered:</h4>
+          
+          <div class="curriculum-groups">
+            
+            <div class="curriculum-group">
+              <h5 class="group-title">Fundamentals & Physical Layer</h5>
+              <div class="badge-list">
+                <span class="skill-badge">Networking Fundamentals</span>
+                <span class="skill-badge">OSI Model</span>
+                <span class="skill-badge">TCP/IP Model</span>
+                <span class="skill-badge">Ethernet</span>
+                <span class="skill-badge">Networking Media</span>
+                <span class="skill-badge">LAN</span>
+                <span class="skill-badge">Network Topologies</span>
+              </div>
+            </div>
+
+            <div class="curriculum-group">
+              <h5 class="group-title">Addressing & Routing</h5>
+              <div class="badge-list">
+                <span class="skill-badge">IPv4 Addressing</span>
+                <span class="skill-badge">IPv6 Addressing</span>
+                <span class="skill-badge">Subnetting</span>
+                <span class="skill-badge">Routers</span>
+                <span class="skill-badge">Static Routing</span>
+                <span class="skill-badge">Dynamic Routing</span>
+                <span class="skill-badge">OSPF</span>
+              </div>
+            </div>
+
+            <div class="curriculum-group">
+              <h5 class="group-title">Switching & Network Services</h5>
+              <div class="badge-list">
+                <span class="skill-badge">Switches</span>
+                <span class="skill-badge">VLANs</span>
+                <span class="skill-badge">Trunking</span>
+                <span class="skill-badge">STP / RSTP</span>
+                <span class="skill-badge">DHCP</span>
+                <span class="skill-badge">DNS</span>
+                <span class="skill-badge">NAT</span>
+              </div>
+            </div>
+
+            <div class="curriculum-group">
+              <h5 class="group-title">Security, Remote Access & Troubleshooting</h5>
+              <div class="badge-list">
+                <span class="skill-badge">ACLs (Access Control Lists)</span>
+                <span class="skill-badge">VPN Fundamentals</span>
+                <span class="skill-badge">SSH</span>
+                <span class="skill-badge">Network Troubleshooting</span>
+                <span class="skill-badge">Basic Network Security</span>
+                <span class="skill-badge">Cybersecurity and Ethical Hacking Fundamentals</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. SKILLS SECTION -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// 05. TECHNICAL INVENTORY</div>
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            All skills listed below represent technologies, protocols, and tools actively practiced in training, lab environments, and software projects. No arbitrary percentage bars.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Skill Card 1: Networking -->
+          <div class="tech-card skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Networking</h3>
+                <span class="category-count">16 Protocols & Concepts</span>
+              </div>
+            </div>
+            <div class="badge-list">
+              <span class="skill-badge">TCP/IP</span>
+              <span class="skill-badge">OSI Model</span>
+              <span class="skill-badge">IPv4</span>
+              <span class="skill-badge">IPv6</span>
+              <span class="skill-badge">Subnetting</span>
+              <span class="skill-badge">VLANs</span>
+              <span class="skill-badge">Trunking</span>
+              <span class="skill-badge">STP/RSTP</span>
+              <span class="skill-badge">Routing</span>
+              <span class="skill-badge">OSPF</span>
+              <span class="skill-badge">DHCP</span>
+              <span class="skill-badge">DNS</span>
+              <span class="skill-badge">NAT</span>
+              <span class="skill-badge">ACLs</span>
+              <span class="skill-badge">VPN Fundamentals</span>
+              <span class="skill-badge">SSH</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 2: Network Infrastructure -->
+          <div class="tech-card skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Network Infrastructure</h3>
+                <span class="category-count">7 Hardware & Topologies</span>
+              </div>
+            </div>
+            <div class="badge-list">
+              <span class="skill-badge">Routers</span>
+              <span class="skill-badge">Switches</span>
+              <span class="skill-badge">Wireless Access Points</span>
+              <span class="skill-badge">Ethernet</span>
+              <span class="skill-badge">LAN</span>
+              <span class="skill-badge">Network Topologies</span>
+              <span class="skill-badge">Network Troubleshooting</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 3: Systems & Infrastructure -->
+          <div class="tech-card skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 17l6-6-6-6m8 14h8"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Systems & Infrastructure</h3>
+                <span class="category-count">7 Operating Systems & Hypervisors</span>
+              </div>
+            </div>
+            <div class="badge-list">
+              <span class="skill-badge">Linux</span>
+              <span class="skill-badge">Windows</span>
+              <span class="skill-badge">Proxmox</span>
+              <span class="skill-badge">Virtualization</span>
+              <span class="skill-badge">Docker</span>
+              <span class="skill-badge">NFS</span>
+              <span class="skill-badge">SMB/Samba</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 4: Monitoring & Remote Access -->
+          <div class="tech-card skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Monitoring & Remote Access</h3>
+                <span class="category-count">5 Telemetry & Tunnels</span>
+              </div>
+            </div>
+            <div class="badge-list">
+              <span class="skill-badge">Grafana</span>
+              <span class="skill-badge">Uptime Kuma</span>
+              <span class="skill-badge">Twingate</span>
+              <span class="skill-badge">Tailscale</span>
+              <span class="skill-badge">Cloudflare Tunnel</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 5: Networking Tools -->
+          <div class="tech-card skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Networking Tools</h3>
+                <span class="category-count">2 Simulation & Inspection</span>
+              </div>
+            </div>
+            <div class="badge-list">
+              <span class="skill-badge">Cisco Packet Tracer</span>
+              <span class="skill-badge">Wireshark</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 6: Programming & Scripting -->
+          <div class="tech-card skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Programming & Scripting</h3>
+                <span class="category-count">4 Languages</span>
+              </div>
+            </div>
+            <div class="badge-list">
+              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">TypeScript</span>
+              <span class="skill-badge">Java</span>
+              <span class="skill-badge">SQL</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 7: Development Tools -->
+          <div class="tech-card skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Development Tools</h3>
+                <span class="category-count">3 Ecosystem Tools</span>
+              </div>
+            </div>
+            <div class="badge-list">
+              <span class="skill-badge">Git</span>
+              <span class="skill-badge">GitHub</span>
+              <span class="skill-badge">VS Code</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 8: AI Tools -->
+          <div class="tech-card skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path>
+                  <path d="M12 16a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2z"></path>
+                  <path d="M2 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"></path>
+                  <path d="M16 12a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="skill-category-title">AI Productivity Tools</h3>
+                <span class="category-count">2 Developer Accelerators</span>
+              </div>
+            </div>
+            <div class="badge-list">
+              <span class="skill-badge">ChatGPT</span>
+              <span class="skill-badge">GitHub Copilot</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. WORK EXPERIENCE SECTION -->
+    <section id="experience" class="experience-section section-padding bg-alt">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// 06. PROFESSIONAL TRACK RECORD</div>
+          <h2 class="section-title">Work Experience</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            Demonstrating hands-on networking training alongside a proven software engineering track record that strengthens systems troubleshooting and automation capability.
+          </p>
+        </div>
+
+        <div class="timeline">
+          
+          <!-- Experience 1: Indra Institute of Education -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot active-dot"></span>
+            </div>
+            <div class="timeline-content tech-card">
+              <div class="item-header">
+                <div>
+                  <span class="badge badge-success">Networking Internship</span>
+                  <h3 class="experience-role">Intern</h3>
+                  <div class="company-name">Indra Institute of Education</div>
+                </div>
+                <div class="time-location">
+                  <span class="time-badge">09/2026 – 10/2026</span>
+                  <span class="location-text">Coimbatore, Tamil Nadu</span>
+                </div>
+              </div>
+              
+              <p class="exp-desc">
+                Gained hands-on experience in networking, Linux, network troubleshooting, routing, switching, VLANs, and network security using Cisco Packet Tracer and Wireshark.
+              </p>
+
+              <div class="exp-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▹</span>
+                  <span>Configured routers, switches, and endpoint hosts within multi-segmented simulated LAN environments.</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▹</span>
+                  <span>Executed packet capture sessions in Wireshark to inspect frame headers, TCP handshakes, DNS queries, and ARP broadcasts.</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▹</span>
+                  <span>Diagnosed and remediated simulated network faults, broken routing paths, and misconfigured switch ports.</span>
+                </div>
+              </div>
+
+              <div class="exp-tech-tags">
+                <span class="role-tag">Networking</span>
+                <span class="role-tag">Linux</span>
+                <span class="role-tag">Routing & Switching</span>
+                <span class="role-tag">VLANs</span>
+                <span class="role-tag">Cisco Packet Tracer</span>
+                <span class="role-tag">Wireshark</span>
+                <span class="role-tag">Network Security</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2: Trika Technologies -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content tech-card">
+              <div class="item-header">
+                <div>
+                  <span class="badge badge-accent">Full-Time Software Engineering</span>
+                  <h3 class="experience-role">Full Stack Developer</h3>
+                  <div class="company-name">Trika Technologies</div>
+                </div>
+                <div class="time-location">
+                  <span class="time-badge">04/2023 – 02/2026</span>
+                  <span class="location-text">Coimbatore, Tamil Nadu</span>
+                </div>
+              </div>
+
+              <p class="exp-desc">
+                Developed and maintained enterprise applications and middleware platforms in a production environment. Worked with Linux, APIs, cloud services, monitoring, and distributed application infrastructure.
+              </p>
+
+              <div class="exp-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▹</span>
+                  <span>Used <strong>Grafana</strong> for service monitoring and real-time infrastructure troubleshooting.</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▹</span>
+                  <span>Administered production workloads running on <strong>Linux</strong> operating systems and integrated distributed API services.</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▹</span>
+                  <span>Collaborated closely with cross-functional engineering teams to troubleshoot complex application, integration, and infrastructure-related issues.</span>
+                </div>
+              </div>
+
+              <div class="exp-tech-tags">
+                <span class="role-tag">Linux</span>
+                <span class="role-tag">APIs</span>
+                <span class="role-tag">Cloud Services</span>
+                <span class="role-tag">Grafana Monitoring</span>
+                <span class="role-tag">Distributed Infrastructure</span>
+                <span class="role-tag">System Troubleshooting</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 3: Zoho Corporation -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content tech-card">
+              <div class="item-header">
+                <div>
+                  <span class="badge badge-neutral">Software Internship</span>
+                  <h3 class="experience-role">Software Developer Intern</h3>
+                  <div class="company-name">Zoho Corporation</div>
+                </div>
+                <div class="time-location">
+                  <span class="time-badge">09/2022 – 02/2023</span>
+                  <span class="location-text">Chennai, Tamil Nadu</span>
+                </div>
+              </div>
+
+              <p class="exp-desc">
+                Developed backend log-management systems using Java, MySQL, and JDBC. Worked on data retrieval, querying, sorting, and troubleshooting. Gained practical experience in software development and debugging.
+              </p>
+
+              <div class="exp-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▹</span>
+                  <span>Engineered backend routines to parse, query, and sort large system log streams to diagnose operational anomalies.</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▹</span>
+                  <span>Developed database queries in MySQL and established database connectivity via JDBC.</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-bullet">▹</span>
+                  <span>Built disciplined debugging habits, systematic log parsing, and backend diagnostic routines.</span>
+                </div>
+              </div>
+
+              <div class="exp-tech-tags">
+                <span class="role-tag">Java</span>
+                <span class="role-tag">MySQL</span>
+                <span class="role-tag">JDBC</span>
+                <span class="role-tag">Log Management</span>
+                <span class="role-tag">Query Optimization</span>
+                <span class="role-tag">Debugging</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. PROJECTS / NETWORKING LABS SECTION -->
+    <section id="projects" class="projects-section section-padding">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// 07. HANDS-ON NETWORKING LABS</div>
+          <h2 class="section-title">Projects & Networking Labs</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            Authentic lab configurations and infrastructure projects directly supported by training and hands-on practice. Strictly verifiable with no fabricated metrics or fake topologies.
+          </p>
+        </div>
+
+        <div class="projects-container">
+          
+          <!-- PROJECT 1: Cisco Networking Lab — Packet Tracer -->
+          <article class="project-card tech-card">
+            <div class="project-grid">
+              
+              <div class="project-info">
+                <div class="project-badge-row">
+                  <span class="badge badge-accent">Packet Tracer Lab</span>
+                  <span class="badge badge-neutral">Cisco IOS Simulation</span>
+                </div>
+
+                <h3 class="project-title">Cisco Networking Lab — Packet Tracer</h3>
+                
+                <p class="project-lead">
+                  Designed and configured multi-router network topologies using Cisco Packet Tracer to practice enterprise routing, switching segmentation, and traffic security.
+                </p>
+
+                <div class="project-block">
+                  <h4 class="block-subtitle">Key Features & Implemented Concepts:</h4>
+                  <ul class="feature-list">
+                    <li><strong>VLAN Configuration & Inter-VLAN Routing:</strong> Partitioned broadcast domains and enabled routed communication between multiple departments.</li>
+                    <li><strong>Network Segmentation:</strong> Applied logical segmentation across switch ports and trunk links for security and isolation.</li>
+                    <li><strong>OSPF Dynamic Routing:</strong> Configured Open Shortest Path First (OSPF) across routers for dynamic, automated routing table convergence.</li>
+                    <li><strong>DHCP Services:</strong> Implemented centralized DHCP pools for automated IP address and gateway allocation to client devices.</li>
+                    <li><strong>ACL Configuration:</strong> Deployed Access Control Lists to enforce packet filtering, restrictive inbound/outbound rules, and access control.</li>
+                    <li><strong>STP/RSTP & EtherChannel Concepts:</strong> Practiced Spanning Tree Protocol to eliminate layer-2 loops and explored LACP/EtherChannel link bundling.</li>
+                    <li><strong>Network Connectivity Testing & Troubleshooting:</strong> Conducted ping sweeps, traceroute hops, and Cisco show commands to diagnose and verify connectivity.</li>
+                  </ul>
+                </div>
+
+                <div class="project-block">
+                  <h4 class="block-subtitle">My Contribution:</h4>
+                  <p class="contribution-text">
+                    Designed the multi-router topology in Cisco Packet Tracer from scratch; configured router sub-interfaces for 802.1Q encapsulation; defined OSPF area routing; authored Standard and Extended ACLs; validated DHCP lease distribution; and resolved simulated cabling and interface mismatch issues.
+                  </p>
+                </div>
+
+                <div class="project-block">
+                  <h4 class="block-subtitle">Technologies Used:</h4>
+                  <div class="badge-list">
+                    <span class="skill-badge">Cisco Packet Tracer</span>
+                    <span class="skill-badge">Routers</span>
+                    <span class="skill-badge">Switches</span>
+                    <span class="skill-badge">VLANs</span>
+                    <span class="skill-badge">Inter-VLAN Routing</span>
+                    <span class="skill-badge">OSPF</span>
+                    <span class="skill-badge">DHCP</span>
+                    <span class="skill-badge">ACLs</span>
+                    <span class="skill-badge">STP/RSTP</span>
+                    <span class="skill-badge">LACP / EtherChannel</span>
+                    <span class="skill-badge">Network Troubleshooting</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-visual">
+                <!-- Visual Container -->
+                <div class="project-img-frame">
+                  <img src="assets/project1.jpg" alt="Cisco Networking Lab Packet Tracer Topology Screenshot" class="project-img">
+                  <div class="img-caption-strip">
+                    <span class="img-status-dot"></span>
+                    <span>assets/project1.jpg</span>
+                  </div>
+                </div>
+
+                <!-- Conceptual Topology SVG Diagram -->
+                <div class="conceptual-diagram-card">
+                  <div class="diagram-header">
+                    <span class="diagram-tag">// CONCEPTUAL LAB TOPOLOGY (VISUALIZATION)</span>
+                  </div>
+                  
+                  <div class="svg-diagram-wrapper">
+                    <svg viewBox="0 0 460 260" class="topology-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Conceptual Cisco Multi-Router Topology Diagram">
+                      <defs>
+                        <linearGradient id="linkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#0284c7" />
+                          <stop offset="100%" stop-color="#10b981" />
+                        </linearGradient>
+                      </defs>
+                      
+                      <!-- Connection Lines -->
+                      <line x1="160" y1="70" x2="300" y2="70" stroke="#0ea5e9" stroke-width="2.5" stroke-dasharray="4" />
+                      <line x1="160" y1="70" x2="100" y2="150" stroke="#38bdf8" stroke-width="2" />
+                      <line x1="300" y1="70" x2="360" y2="150" stroke="#38bdf8" stroke-width="2" />
+                      <line x1="100" y1="150" x2="60" y2="220" stroke="#64748b" stroke-width="1.5" />
+                      <line x1="100" y1="150" x2="140" y2="220" stroke="#64748b" stroke-width="1.5" />
+                      <line x1="360" y1="150" x2="320" y2="220" stroke="#64748b" stroke-width="1.5" />
+                      <line x1="360" y1="150" x2="400" y2="220" stroke="#64748b" stroke-width="1.5" />
+
+                      <!-- Router 1 -->
+                      <g class="svg-node">
+                        <circle cx="160" cy="70" r="22" fill="#0f172a" stroke="#0284c7" stroke-width="2" />
+                        <text x="160" y="74" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="bold" font-family="sans-serif">R1</text>
+                        <text x="160" y="40" text-anchor="middle" fill="#38bdf8" font-size="9" font-family="sans-serif">OSPF Area 0</text>
+                      </g>
+
+                      <!-- Router 2 -->
+                      <g class="svg-node">
+                        <circle cx="300" cy="70" r="22" fill="#0f172a" stroke="#0284c7" stroke-width="2" />
+                        <text x="300" y="74" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="bold" font-family="sans-serif">R2</text>
+                        <text x="300" y="40" text-anchor="middle" fill="#38bdf8" font-size="9" font-family="sans-serif">DHCP / ACL</text>
+                      </g>
+
+                      <!-- Switch 1 -->
+                      <g class="svg-node">
+                        <rect x="75" y="135" width="50" height="28" rx="4" fill="#0f172a" stroke="#10b981" stroke-width="2" />
+                        <text x="100" y="153" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="bold" font-family="sans-serif">SW1</text>
+                        <text x="100" y="175" text-anchor="middle" fill="#10b981" font-size="8" font-family="sans-serif">Trunk / STP</text>
+                      </g>
+
+                      <!-- Switch 2 -->
+                      <g class="svg-node">
+                        <rect x="335" y="135" width="50" height="28" rx="4" fill="#0f172a" stroke="#10b981" stroke-width="2" />
+                        <text x="360" y="153" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="bold" font-family="sans-serif">SW2</text>
+                        <text x="360" y="175" text-anchor="middle" fill="#10b981" font-size="8" font-family="sans-serif">Inter-VLAN</text>
+                      </g>
+
+                      <!-- End Devices -->
+                      <g class="svg-node">
+                        <rect x="45" y="212" width="30" height="20" rx="2" fill="#1e293b" stroke="#94a3b8" stroke-width="1" />
+                        <text x="60" y="225" text-anchor="middle" fill="#e2e8f0" font-size="8" font-family="sans-serif">PC-A</text>
+                      </g>
+                      <g class="svg-node">
+                        <rect x="125" y="212" width="30" height="20" rx="2" fill="#1e293b" stroke="#94a3b8" stroke-width="1" />
+                        <text x="140" y="225" text-anchor="middle" fill="#e2e8f0" font-size="8" font-family="sans-serif">PC-B</text>
+                      </g>
+                      <g class="svg-node">
+                        <rect x="305" y="212" width="30" height="20" rx="2" fill="#1e293b" stroke="#94a3b8" stroke-width="1" />
+                        <text x="320" y="225" text-anchor="middle" fill="#e2e8f0" font-size="8" font-family="sans-serif">PC-C</text>
+                      </g>
+                      <g class="svg-node">
+                        <rect x="385" y="212" width="30" height="20" rx="2" fill="#1e293b" stroke="#94a3b8" stroke-width="1" />
+                        <text x="400" y="225" text-anchor="middle" fill="#e2e8f0" font-size="8" font-family="sans-serif">Server</text>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="diagram-footer-note">
+                    * Conceptual visualization illustrating multi-router OSPF, VLAN segmentation & ACL deployment.
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Home Lab — Network & Infrastructure -->
+          <article class="project-card tech-card">
+            <div class="project-grid">
+              
+              <div class="project-info">
+                <div class="project-badge-row">
+                  <span class="badge badge-accent">Virtualization & Systems</span>
+                  <span class="badge badge-success">Proxmox VE</span>
+                </div>
+
+                <h3 class="project-title">Home Lab — Network & Infrastructure</h3>
+                
+                <p class="project-lead">
+                  Built and maintained a virtualized home-lab environment using Proxmox VE to host infrastructure services, shared storage, zero-trust remote access, and real-time telemetry.
+                </p>
+
+                <div class="project-block">
+                  <h4 class="block-subtitle">Key Features & Implemented Services:</h4>
+                  <ul class="feature-list">
+                    <li><strong>Proxmox VE Hypervisor:</strong> Provisioned, configured, and managed Linux virtual machines and containerized services.</li>
+                    <li><strong>Network Storage:</strong> Configured NFS and SMB/Samba network-attached file shares for cross-platform data availability.</li>
+                    <li><strong>Secure Remote Access:</strong> Implemented overlay mesh networks using <strong>Tailscale</strong> and <strong>Twingate</strong> for seamless remote management.</li>
+                    <li><strong>Cloudflare Tunnel:</strong> Configured zero-trust encrypted tunnels to publish select services without exposing insecure public ports.</li>
+                    <li><strong>DNS Resolution & Pi-hole:</strong> Configured localized DNS services and Pi-hole for network-wide ad/tracker filtering and domain inspection.</li>
+                    <li><strong>Telemetry & Monitoring:</strong> Implemented <strong>Grafana</strong> dashboards and <strong>Uptime Kuma</strong> heartbeats for host resource and service availability tracking.</li>
+                    <li><strong>Hands-On Troubleshooting:</strong> Diagnosed and resolved network connectivity, DNS resolution, service access, storage mounts, and host infrastructure issues.</li>
+                  </ul>
+                </div>
+
+                <div class="project-block">
+                  <h4 class="block-subtitle">My Contribution:</h4>
+                  <p class="contribution-text">
+                    Installed and administered the Proxmox hypervisor; partitioned virtual networks; established shared storage volumes via NFS/SMB; deployed Pi-hole and tuned DNS resolution; configured secure tunnels (Tailscale, Twingate, Cloudflare); and authored Grafana and Uptime Kuma monitoring alarms.
+                  </p>
+                </div>
+
+                <div class="project-block">
+                  <h4 class="block-subtitle">Technologies Used:</h4>
+                  <div class="badge-list">
+                    <span class="skill-badge">Proxmox</span>
+                    <span class="skill-badge">Virtual Machines</span>
+                    <span class="skill-badge">Linux</span>
+                    <span class="skill-badge">Docker</span>
+                    <span class="skill-badge">NFS</span>
+                    <span class="skill-badge">SMB/Samba</span>
+                    <span class="skill-badge">Twingate</span>
+                    <span class="skill-badge">Tailscale</span>
+                    <span class="skill-badge">Cloudflare Tunnel</span>
+                    <span class="skill-badge">DNS</span>
+                    <span class="skill-badge">Pi-hole</span>
+                    <span class="skill-badge">Grafana</span>
+                    <span class="skill-badge">Uptime Kuma</span>
+                    <span class="skill-badge">Infrastructure Troubleshooting</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-visual">
+                <!-- Visual Container -->
+                <div class="project-img-frame">
+                  <img src="assets/project2.jpg" alt="Proxmox Virtualized Home Lab Infrastructure Screenshot" class="project-img">
+                  <div class="img-caption-strip">
+                    <span class="img-status-dot"></span>
+                    <span>assets/project2.jpg</span>
+                  </div>
+                </div>
+
+                <!-- Conceptual Home Lab SVG Diagram -->
+                <div class="conceptual-diagram-card">
+                  <div class="diagram-header">
+                    <span class="diagram-tag">// CONCEPTUAL HOME LAB ARCHITECTURE</span>
+                  </div>
+                  
+                  <div class="svg-diagram-wrapper">
+                    <svg viewBox="0 0 460 260" class="topology-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Conceptual Proxmox Virtualized Home Lab Architecture">
+                      <!-- Base Hypervisor Box -->
+                      <rect x="20" y="20" width="420" height="220" rx="8" fill="#0b132b" stroke="#0ea5e9" stroke-width="1.5" stroke-dasharray="6,4" />
+                      <text x="40" y="44" fill="#38bdf8" font-size="11" font-weight="bold" font-family="sans-serif">PROXMOX VE HYPERVISOR HOST</text>
+
+                      <!-- VMs and Containers -->
+                      <rect x="40" y="65" width="115" height="70" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+                      <text x="97" y="88" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="bold" font-family="sans-serif">DNS & Security</text>
+                      <text x="97" y="106" text-anchor="middle" fill="#10b981" font-size="9" font-family="sans-serif">Pi-hole DNS</text>
+                      <text x="97" y="122" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="sans-serif">Twingate / Tailscale</text>
+
+                      <rect x="172" y="65" width="115" height="70" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+                      <text x="230" y="88" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="bold" font-family="sans-serif">Monitoring</text>
+                      <text x="230" y="106" text-anchor="middle" fill="#38bdf8" font-size="9" font-family="sans-serif">Grafana Telemetry</text>
+                      <text x="230" y="122" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="sans-serif">Uptime Kuma</text>
+
+                      <rect x="305" y="65" width="115" height="70" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+                      <text x="362" y="88" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="bold" font-family="sans-serif">Network Storage</text>
+                      <text x="362" y="106" text-anchor="middle" fill="#f59e0b" font-size="9" font-family="sans-serif">NFS Shares</text>
+                      <text x="362" y="122" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="sans-serif">SMB / Samba</text>
+
+                      <!-- Remote Access & Ingress Layer -->
+                      <rect x="40" y="155" width="380" height="65" rx="6" fill="#111c35" stroke="#6366f1" stroke-width="1" />
+                      <text x="55" y="175" fill="#a5b4fc" font-size="9" font-weight="bold" font-family="sans-serif">SECURE INGRESS & REMOTE ACCESS LAYER</text>
+                      
+                      <!-- Badges in Ingress -->
+                      <rect x="55" y="185" width="105" height="24" rx="4" fill="#1e293b" />
+                      <text x="107" y="201" text-anchor="middle" fill="#38bdf8" font-size="8" font-family="sans-serif">Tailscale Mesh VPN</text>
+
+                      <rect x="175" y="185" width="110" height="24" rx="4" fill="#1e293b" />
+                      <text x="230" y="201" text-anchor="middle" fill="#10b981" font-size="8" font-family="sans-serif">Cloudflare Tunnel</text>
+
+                      <rect x="300" y="185" width="105" height="24" rx="4" fill="#1e293b" />
+                      <text x="352" y="201" text-anchor="middle" fill="#f59e0b" font-size="8" font-family="sans-serif">Twingate Connector</text>
+                    </svg>
+                  </div>
+                  <div class="diagram-footer-note">
+                    * Conceptual visualization illustrating Proxmox hypervisor, DNS, telemetry, storage & ingress layers.
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. CERTIFICATIONS SECTION -->
+    <section id="certifications" class="certifications-section section-padding bg-alt">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// 08. CREDENTIALS & TRAININGS</div>
+          <h2 class="section-title">Certifications</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            Formal technical certifications and verified training completions directly from resume records.
+          </p>
+        </div>
+
+        <div class="certifications-grid">
+          
+          <!-- Cert 1: A+ -->
+          <div class="tech-card cert-card">
+            <div class="cert-img-container">
+              <img src="assets/certificates/certificate1.jpg" alt="CompTIA A+ Training Certificate - Indra Institute of Education" class="cert-img">
+            </div>
+            <div class="cert-content">
+              <span class="badge badge-accent">Networking & Hardware</span>
+              <h3 class="cert-title">A+</h3>
+              <div class="cert-issuer">Indra Institute of Education (IIE)</div>
+              <p class="cert-desc">
+                Comprehensive training in computer hardware, peripheral maintenance, system diagnostics, and operating system configuration.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cert 2: Network+ -->
+          <div class="tech-card cert-card">
+            <div class="cert-img-container">
+              <img src="assets/certificates/certificate1.jpg" alt="CompTIA Network+ Training Certificate - Indra Institute of Education" class="cert-img">
+            </div>
+            <div class="cert-content">
+              <span class="badge badge-accent">Core Networking</span>
+              <h3 class="cert-title">Network+</h3>
+              <div class="cert-issuer">Indra Institute of Education (IIE)</div>
+              <p class="cert-desc">
+                Training in network architecture, OSI model, IP addressing & subnetting, Ethernet switching, routing protocols, and media types.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cert 3: CCNA -->
+          <div class="tech-card cert-card">
+            <div class="cert-img-container">
+              <img src="assets/certificates/certificate2.jpg" alt="Cisco Certified Network Associate CCNA Training - Indra Institute of Education" class="cert-img">
+            </div>
+            <div class="cert-content">
+              <span class="badge badge-success">Cisco Routing & Switching</span>
+              <h3 class="cert-title">CCNA</h3>
+              <div class="cert-issuer">Indra Institute of Education (IIE)</div>
+              <p class="cert-desc">
+                Hands-on training in Cisco IOS CLI, multi-router OSPF, VLANs, trunking, STP/RSTP, ACL security filtering, and DHCP deployment.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cert 4: CEH -->
+          <div class="tech-card cert-card">
+            <div class="cert-img-container">
+              <img src="assets/certificates/certificate2.jpg" alt="Certified Ethical Hacker CEH Training - Indra Institute of Education" class="cert-img">
+            </div>
+            <div class="cert-content">
+              <span class="badge badge-success">Cybersecurity</span>
+              <h3 class="cert-title">CEH</h3>
+              <div class="cert-issuer">Indra Institute of Education (IIE)</div>
+              <p class="cert-desc">
+                Fundamental cybersecurity concepts, network vulnerability assessment, packet sniffing, security best practices, and ethical hacking.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cert 5: Certified Java Developer -->
+          <div class="tech-card cert-card">
+            <div class="cert-img-container">
+              <img src="assets/certificates/certificate3.jpg" alt="Certified Java Developer - Infosys Certification" class="cert-img">
+            </div>
+            <div class="cert-content">
+              <span class="badge badge-neutral">Software Development</span>
+              <h3 class="cert-title">Certified Java Developer</h3>
+              <div class="cert-issuer">Infosys Certification, 2022</div>
+              <p class="cert-desc">
+                Object-oriented programming, data structures, backend engineering, and algorithmic problem-solving credential.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cert 6: Advanced Programming Training -->
+          <div class="tech-card cert-card">
+            <div class="cert-img-container">
+              <img src="assets/certificates/certificate3.jpg" alt="Advanced Programming Training - Zoho Corporation" class="cert-img">
+            </div>
+            <div class="cert-content">
+              <span class="badge badge-neutral">Enterprise Training</span>
+              <h3 class="cert-title">Advanced Programming Training</h3>
+              <div class="cert-issuer">Zoho Corporation</div>
+              <p class="cert-desc">
+                Intensive industry training in backend systems, database interaction (JDBC/MySQL), logging architectures, and software troubleshooting.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. RESUME SECTION -->
+    <section id="resume" class="resume-section section-padding">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// 09. OFFICIAL CURRICULUM VITAE</div>
+          <h2 class="section-title">Resume</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="resume-cta-box tech-card">
+          <div class="resume-cta-content">
+            <div class="terminal-badge">
+              <span class="status-indicator"></span>
+              <span class="badge-text">FILE STATUS: UP-TO-DATE & ACCESSIBLE</span>
+            </div>
+            
+            <h3 class="resume-cta-title">Looking for the complete resume?</h3>
+            
+            <p class="resume-cta-desc">
+              Download my official Network Engineer resume detailing my Computer Science engineering degree, 3+ years software/systems background, formal A+/N+/CCNA/CEH training at IIE, and hands-on Packet Tracer and Proxmox lab implementations.
+            </p>
+
+            <div class="resume-highlights-row">
+              <div class="resume-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>B.E. Computer Science Graduate</span>
+              </div>
+              <div class="resume-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>A+, N+, CCNA, CEH Trained</span>
+              </div>
+              <div class="resume-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Proxmox & Cisco Packet Tracer Labs</span>
+              </div>
+              <div class="resume-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Targeting Entry-Level / NOC Roles</span>
+              </div>
+            </div>
+
+            <div class="resume-btn-row">
+              <a href="assets/resume.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer" download="Pradeep_Balamurugan_Resume.pdf">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download Resume (PDF)</span>
+              </a>
+
+              <a href="assets/resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <span>View in Browser</span>
+              </a>
+            </div>
+
+            <div class="resume-path-hint">
+              <span class="path-label">File Location:</span>
+              <code>assets/resume.pdf</code>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 11. CONTACT SECTION -->
+    <section id="contact" class="contact-section section-padding bg-alt">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// 10. GET IN TOUCH</div>
+          <h2 class="section-title">Contact</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            Interested in discussing an entry-level Network Engineer, NOC Engineer, or Network Support opportunity? Feel free to reach out directly.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info Cards -->
+          <div class="contact-info-column">
+            
+            <a href="mailto:pradeepbalamurugan22@gmail.com" class="contact-card tech-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-type">Email</span>
+                <span class="contact-val">pradeepbalamurugan22@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="tel:8056771482" class="contact-card tech-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-type">Phone</span>
+                <span class="contact-val">8056771482</span>
+              </div>
+            </a>
+
+            <div class="contact-card tech-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-type">Location</span>
+                <span class="contact-val">Coimbatore, Tamil Nadu, India</span>
+              </div>
+            </div>
+
+            <a href="https://linkedin.com/in/pradeep-balamurugan" target="_blank" rel="noopener noreferrer" class="contact-card tech-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c-.95 0-1.72-.77-1.72-1.72s.77-1.72 1.72-1.72 1.73.77 1.73 1.72-.78 1.72-1.73 1.72m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-type">LinkedIn</span>
+                <span class="contact-val">linkedin.com/in/pradeep-balamurugan</span>
+              </div>
+            </a>
+
+            <div class="contact-card tech-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-type">Portfolio Domain</span>
+                <span class="contact-val">Pradeepbalamurugan.com</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Contact Form (Frontend Only) -->
+          <div class="contact-form-container tech-card">
+            <div class="form-header">
+              <span class="terminal-prefix">//</span>
+              <h3 class="form-title">Send a Direct Message</h3>
+              <p class="form-note">
+                Fill out the form below or email me directly at <a href="mailto:pradeepbalamurugan22@gmail.com" class="inline-link">pradeepbalamurugan22@gmail.com</a>.
+              </p>
+            </div>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name <span class="required">*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. John Doe / Hiring Manager" required>
+                <div class="field-error" id="name-error">Please enter your name.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address <span class="required">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. recruiter@company.com" required>
+                <div class="field-error" id="email-error">Please enter a valid email address.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message <span class="required">*</span></label>
+                <textarea id="contact-message" name="message" rows="5" class="form-input" placeholder="Please mention the position (Network Engineer / NOC / Support) or details about your inquiry..." required></textarea>
+                <div class="field-error" id="message-error">Please enter a message.</div>
+              </div>
+
+              <!-- Frontend Notice -->
+              <div class="form-disclaimer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="info-icon">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span>Notice: This is a client-side frontend form. Submitting will validate your message and provide a direct mailto action to dispatch via your preferred mail client.</span>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn btn-primary btn-submit">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Submit Message</span>
+              </button>
+
+            </form>
+
+            <!-- Success / Action Modal inside form card -->
+            <div id="form-feedback" class="form-feedback hidden" role="status" aria-live="polite">
+              <div class="feedback-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <h4 class="feedback-title">Message Formatted Successfully!</h4>
+              <p class="feedback-text" id="feedback-text">
+                Your message is ready. Click the button below to send it directly to <strong>pradeepbalamurugan22@gmail.com</strong> using your email client.
+              </p>
+              <div class="feedback-actions">
+                <a href="#" id="direct-email-link" class="btn btn-primary">Open in Email Client</a>
+                <button type="button" id="reset-form-btn" class="btn btn-secondary">Send Another Message</button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 12. FOOTER SECTION -->
+  <footer id="site-footer" class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="brand-bracket">&lt;</span>
+            <span class="brand-name">Pradeep Balamurugan</span>
+            <span class="brand-bracket">/&gt;</span>
+          </div>
+          <p class="footer-role">Aspiring Network Engineer</p>
+          <p class="footer-location">
+            <svg class="geo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Coimbatore, Tamil Nadu, India
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Fast Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#career-goal">Career Goal</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects & Labs</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-connect-col">
+          <h4 class="footer-heading">Connect</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="https://linkedin.com/in/pradeep-balamurugan" target="_blank" rel="noopener noreferrer">
+                LinkedIn Profile
+              </a>
+            </li>
+            <li>
+              <a href="mailto:pradeepbalamurugan22@gmail.com">
+                pradeepbalamurugan22@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:8056771482">
+                +91 8056771482
+              </a>
+            </li>
+            <li>
+              <span class="domain-text">Portfolio: Pradeepbalamurugan.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright-text">
+          &copy; <span id="current-year">2026</span> Pradeep Balamurugan. All rights reserved.
+        </div>
+        <div class="footer-tagline">
+          Designed with semantic HTML5, CSS3, & Vanilla JS &bull; Network & Infrastructure Focus
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scroll-To-Top Button -->
+  <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Scroll back to top of page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
