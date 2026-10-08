@@ -1,0 +1,14 @@
+{
+  "name": "networkengineerportfolio",
+  "version": "1.0.0",
+  "description": "Pradeep Balamurugan - Aspiring Network Engineer Portfolio",
+  "main": "api/contact.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "resend": "^6.9.3"
+  }
+}

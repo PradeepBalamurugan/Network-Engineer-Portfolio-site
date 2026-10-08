@@ -68,7 +68,7 @@ Built entirely with standard web technologies — **Zero External Frameworks or 
    - **Home Lab (Network & Infrastructure):** Proxmox VE hypervisor, Linux VMs, NFS/SMB storage shares, Tailscale & Twingate mesh overlays, Cloudflare zero-trust tunnel, Pi-hole DNS, and Grafana / Uptime Kuma monitoring.
 9. **Certifications:** Credential cards for A+, Network+, CCNA, CEH, Certified Java Developer (Infosys), and Advanced Programming (Zoho).
 10. **Resume:** One-click download and browser preview for `assets/resume.pdf`.
-11. **Contact:** Email, phone, location, LinkedIn link, and a client-side contact form with mailto integration.
+11. **Contact:** Email, phone, location, LinkedIn link, and a working contact form powered by Resend email API.
 12. **Footer:** Quick navigation, credentials, and dynamic copyright year.
 
 ---
@@ -81,7 +81,22 @@ Built entirely with standard web technologies — **Zero External Frameworks or 
    cd Network-Engineer-Portfolio-site
    ```
 
-2. **Open in browser:**
+2. **Install dependencies & set environment:**
+   ```bash
+   npm install
+   ```
+   Add your Resend API key to `.env`:
+   ```env
+   RESEND_API_KEY=
+   ```
+
+3. **Start local development server:**
+   ```bash
+   npm start
+   ```
+   Navigate to `http://localhost:3000` in your web browser.
+
+4. **Alternative static preview (without email backend):**
    Double-click `index.html` or run:
    ```bash
    # Python HTTP server

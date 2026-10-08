@@ -174,87 +174,150 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -------------------------------------------------------------------------
-  // 7. Contact Form Handling (Frontend Only, Honest Feedback)
+  // 7. Contact Form Handling (Resend Email Integration)
   // -------------------------------------------------------------------------
   const contactForm = document.getElementById('contact-form');
-  const formFeedback = document.getElementById('form-feedback');
-  const feedbackText = document.getElementById('feedback-text');
-  const directEmailLink = document.getElementById('direct-email-link');
-  const resetFormBtn = document.getElementById('reset-form-btn');
+  const formStatus = document.getElementById('form-status');
+  const submitBtn = document.getElementById('submit-btn');
+  const submitBtnText = document.getElementById('submit-btn-text');
 
   if (contactForm) {
     const nameInput = document.getElementById('contact-name');
     const emailInput = document.getElementById('contact-email');
     const messageInput = document.getElementById('contact-message');
+    const honeypotInput = document.getElementById('contact-hp');
 
     const nameError = document.getElementById('name-error');
     const emailError = document.getElementById('email-error');
     const messageError = document.getElementById('message-error');
 
     const validateEmail = (email) => {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/.test(email);
     };
 
-    contactForm.addEventListener('submit', (e) => {
+    const showStatus = (message, type) => {
+      if (!formStatus) return;
+      formStatus.className = `form-status ${type}`;
+      formStatus.textContent = message;
+      formStatus.style.display = 'flex';
+    };
+
+    const clearStatus = () => {
+      if (!formStatus) return;
+      formStatus.className = 'form-status';
+      formStatus.textContent = '';
+      formStatus.style.display = 'none';
+    };
+
+    // Clear status and field errors as user corrects inputs
+    if (nameInput) {
+      nameInput.addEventListener('input', () => {
+        clearStatus();
+        if (nameInput.value.trim().length >= 2) nameError?.classList.remove('active');
+      });
+    }
+
+    if (emailInput) {
+      emailInput.addEventListener('input', () => {
+        clearStatus();
+        if (validateEmail(emailInput.value.trim())) emailError?.classList.remove('active');
+      });
+    }
+
+    if (messageInput) {
+      messageInput.addEventListener('input', () => {
+        clearStatus();
+        if (messageInput.value.trim().length >= 10) messageError?.classList.remove('active');
+      });
+    }
+
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      clearStatus();
+
+      const nameVal = nameInput ? nameInput.value.trim() : '';
+      const emailVal = emailInput ? emailInput.value.trim() : '';
+      const messageVal = messageInput ? messageInput.value.trim() : '';
+      const gotchaVal = honeypotInput ? honeypotInput.value.trim() : '';
 
       let isValid = true;
 
-      // Validate Name
-      if (!nameInput.value.trim()) {
-        nameError.classList.add('active');
+      // Validate Name (Required, 2 - 100 characters)
+      if (!nameVal || nameVal.length < 2 || nameVal.length > 100) {
+        if (nameError) {
+          nameError.textContent = !nameVal ? 'Please enter your name.' : 'Name must be between 2 and 100 characters.';
+          nameError.classList.add('active');
+        }
         isValid = false;
       } else {
-        nameError.classList.remove('active');
+        nameError?.classList.remove('active');
       }
 
-      // Validate Email
-      if (!emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
-        emailError.classList.add('active');
+      // Validate Email (Required, valid email format)
+      if (!emailVal || !validateEmail(emailVal)) {
+        if (emailError) {
+          emailError.textContent = 'Please enter a valid email address.';
+          emailError.classList.add('active');
+        }
         isValid = false;
       } else {
-        emailError.classList.remove('active');
+        emailError?.classList.remove('active');
       }
 
-      // Validate Message
-      if (!messageInput.value.trim()) {
-        messageError.classList.add('active');
+      // Validate Message (Required, 10 - 5000 characters)
+      if (!messageVal || messageVal.length < 10 || messageVal.length > 5000) {
+        if (messageError) {
+          messageError.textContent = !messageVal ? 'Please enter a message.' : 'Message must be at least 10 characters.';
+          messageError.classList.add('active');
+        }
         isValid = false;
       } else {
-        messageError.classList.remove('active');
+        messageError?.classList.remove('active');
       }
 
       if (!isValid) return;
 
-      const name = encodeURIComponent(nameInput.value.trim());
-      const email = encodeURIComponent(emailInput.value.trim());
-      const messageBody = encodeURIComponent(
-        `Hello Pradeep,\n\nName: ${nameInput.value.trim()}\nEmail: ${emailInput.value.trim()}\n\nMessage:\n${messageInput.value.trim()}`
-      );
+      // Show Sending... and disable button
+      const originalText = submitBtnText ? submitBtnText.textContent : 'Send Message';
+      if (submitBtn) submitBtn.disabled = true;
+      if (submitBtnText) submitBtnText.textContent = 'Sending...';
 
-      const recipient = 'pradeepbalamurugan22@gmail.com';
-      const subject = encodeURIComponent(`Portfolio Inquiry from ${nameInput.value.trim()}`);
-      const mailtoUrl = `mailto:${recipient}?subject=${subject}&body=${messageBody}`;
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: nameVal,
+            email: emailVal,
+            message: messageVal,
+            _gotcha: gotchaVal
+          })
+        });
 
-      // Update feedback dialog
-      feedbackText.innerHTML = `Thank you, <strong>${nameInput.value.trim()}</strong>! Your message has been prepared for dispatch. Click below to launch your default email client to send it directly to <code>${recipient}</code>.`;
-      directEmailLink.setAttribute('href', mailtoUrl);
+        const result = await response.json().catch(() => ({}));
 
-      // Show feedback modal, hide form
-      contactForm.style.display = 'none';
-      formFeedback.classList.remove('hidden');
+        if (response.ok && result.success) {
+          // Success message: Thanks! Your message has been sent successfully.
+          showStatus('Thanks! Your message has been sent successfully.', 'success');
+          // Clear form only on success
+          contactForm.reset();
+        } else {
+          // Error message: Sorry, your message could not be sent. Please try again.
+          const errorMsg = result.message || 'Sorry, your message could not be sent. Please try again.';
+          showStatus(errorMsg, 'error');
+        }
+      } catch (err) {
+        // Network or fetch failure
+        showStatus('Sorry, your message could not be sent. Please try again.', 'error');
+      } finally {
+        // Re-enable button and restore label
+        if (submitBtn) submitBtn.disabled = false;
+        if (submitBtnText) submitBtnText.textContent = originalText;
+      }
     });
-
-    if (resetFormBtn) {
-      resetFormBtn.addEventListener('click', () => {
-        contactForm.reset();
-        contactForm.style.display = 'block';
-        formFeedback.classList.add('hidden');
-        nameError.classList.remove('active');
-        emailError.classList.remove('active');
-        messageError.classList.remove('active');
-      });
-    }
   }
 
   // -------------------------------------------------------------------------

@@ -1528,14 +1528,20 @@
                 <div class="field-error" id="message-error">Please enter a message.</div>
               </div>
 
-              <!-- Frontend Notice -->
+              <!-- Honeypot Field for anti-spam (hidden from users) -->
+              <div class="form-group-hp" style="display:none !important;" aria-hidden="true">
+                <label for="contact-hp">Leave this field blank</label>
+                <input type="text" id="contact-hp" name="_gotcha" tabindex="-1" autocomplete="off">
+              </div>
+
+              <!-- Direct Delivery Notice -->
               <div class="form-disclaimer">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="info-icon">
                   <circle cx="12" cy="12" r="10"></circle>
                   <line x1="12" y1="16" x2="12" y2="12"></line>
                   <line x1="12" y1="8" x2="12.01" y2="8"></line>
                 </svg>
-                <span>Notice: This is a client-side frontend form. Submitting will validate your message and provide a direct mailto action to dispatch via your preferred mail client.</span>
+                <span>Your message will be sent directly to pradeepbalamurugan22@gmail.com.</span>
               </div>
 
               <button type="submit" id="submit-btn" class="btn btn-primary btn-submit">
@@ -1543,28 +1549,13 @@
                   <line x1="22" y1="2" x2="11" y2="13"></line>
                   <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                 </svg>
-                <span>Submit Message</span>
+                <span id="submit-btn-text">Send Message</span>
               </button>
 
-            </form>
+              <!-- Inline Status Feedback for Success / Error -->
+              <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
 
-            <!-- Success / Action Modal inside form card -->
-            <div id="form-feedback" class="form-feedback hidden" role="status" aria-live="polite">
-              <div class="feedback-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-              </div>
-              <h4 class="feedback-title">Message Formatted Successfully!</h4>
-              <p class="feedback-text" id="feedback-text">
-                Your message is ready. Click the button below to send it directly to <strong>pradeepbalamurugan22@gmail.com</strong> using your email client.
-              </p>
-              <div class="feedback-actions">
-                <a href="#" id="direct-email-link" class="btn btn-primary">Open in Email Client</a>
-                <button type="button" id="reset-form-btn" class="btn btn-secondary">Send Another Message</button>
-              </div>
-            </div>
+            </form>
 
           </div>
 
